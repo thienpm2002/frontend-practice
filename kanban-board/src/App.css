@@ -1,0 +1,292 @@
+
+/*-------------- Header --------------*/
+.header {
+  height: var(--header-height);
+  padding: 8px;
+}
+
+
+/*-------------- Content --------------*/
+.content-container {
+  display: flex;
+  gap: 12px;
+  padding: 4px 16px 32px 16px;
+  width: 100%;
+}
+
+/*-------------- Aside --------------*/
+.aside {
+  flex: 1;
+  height: 100%;
+  height: 835px;
+  background-color: #E2EDFE;
+  border-radius: 16px;
+}
+
+/*-------------- Main --------------*/
+.main {
+  flex: 4;
+  height: 835px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg,#7f5fc7,#d97ac0);
+  border-radius: 16px;
+  padding-bottom: 32px; 
+}
+
+/*-------------- Main Header --------------*/
+.board-header {
+  padding: 12px 12px 12px 24px;
+  height: auto;
+}
+
+.board-header h1 {
+  font-size: 1.6rem;
+  line-height: 32px;
+  font-weight: 653;
+  color: #fff;
+}
+
+/*-------------- Board Canvas --------------*/
+.board-canvas {
+  margin-top: 12px;
+  height: 100%;
+  padding-left: 12px;
+}
+
+.board {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/*-------------- Board Column --------------*/
+.column {
+  width: 272px;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.todo {
+  background-color: #F5E989;
+}
+
+.inProgress {
+  background-color: #F1F2F4;
+}
+
+.done {
+  background-color: #BAF3DB;
+}
+
+.column > h3 {
+  font-weight: 600;
+  margin-bottom: 4px;
+  padding-left: 8px;
+}
+
+.todo > h3 {
+  color: rgb(83, 63, 4);
+}
+
+.done > h3 {
+  color: rgb(22, 75, 53);
+}
+
+.inProgress > h3 {
+  color: rgb(41, 42, 46);
+}
+
+/*-------------- Column Footer --------------*/
+.footer-column {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 90%;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.todo .footer-column:hover {
+  background-color: #e4d03a;
+}
+
+.inProgress .footer-column:hover {
+  background-color: #a4bbeb;
+}
+
+.done .footer-column:hover {
+  background-color: #78f0be;
+}
+
+.footer-column p {
+  margin-left: 4px;
+}
+
+
+/*-------------- Cards  --------------*/
+.cards {
+  max-height: 600px;
+  min-height: 15px;
+  overflow-y: auto;
+  padding-right: 8px; 
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(9, 30, 66, 0.25) transparent;
+  scroll-behavior: smooth;
+}
+
+/*-------------- Scroll -----------------*/
+.cards::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cards::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 999px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background: rgba(9, 30, 66, 0.18);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.cards::-webkit-scrollbar-thumb:hover {
+  background: rgba(9, 30, 66, 0.32);
+  background-clip: content-box;
+}
+
+
+/*-------------- Card --------------*/
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 1.4rem;
+  min-height: 24px;
+  box-shadow: 0px 1px 1px #1E1F2140, 0px 0px 1px #1E1F214F;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card:hover {
+  border: 1px solid #000;
+
+}
+
+.close-icon {
+  cursor: pointer;
+  color: #999;
+}
+
+.card .close-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.card:hover .close-icon {
+  display: block;
+}
+
+.add-card-input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1.4rem;
+  box-shadow: 0px 1px 1px #1E1F2140, 0px 0px 1px #1E1F214F;
+}
+
+.add-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.add-card-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0079bf;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-card-actions button:hover {
+  background-color: #026aa7;
+}
+
+/*-------------- Modal --------------*/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  width: 400px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.modal-footer button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #999;
+}
+
+.cancel-button:hover {
+  background-color: #777;
+}
+
+.save-button {
+  background-color: #0079bf;
+}
+
+.save-button:hover {
+  background-color: #026aa7;
+}

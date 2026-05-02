@@ -1,0 +1,31 @@
+:root {
+  --background-primary: #ffffff;
+  --header-height: 48px;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--background-primary);
+  font-size: 1.6rem;
+  font-family: "Atlassian Sans",
+    ui-sans-serif,
+    -apple-system,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+
+ul {
+  list-style-type: none;
+}

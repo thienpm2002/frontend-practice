@@ -1,0 +1,74 @@
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-timer {
+  height: 300px;
+  width: 500px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.title,
+.input,
+.time,
+.option {
+  margin-bottom: 30px;
+}
+
+.input {
+  min-height: 20px;
+  font-size: 18px;
+  padding: 10px 6px;
+}
+
+.time {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.option {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  border-radius: 8px;
+  cursor: pointer;
+  border: none; 
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+
+.start {
+  background-color: #22c55e;
+}
+
+.start:hover {
+  background-color: #16a34a;
+}
+
+.pause {
+  background-color: #f59e0b;
+}
+
+.pause:hover {
+  background-color: #d97706;
+}
+
+.reset {
+  background-color: #ef4444;
+}
+
+.reset:hover {
+  background-color: #dc2626;
+}

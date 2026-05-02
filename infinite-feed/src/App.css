@@ -1,0 +1,289 @@
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+.feed {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-item {
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.header,
+.title,
+.body,
+.tags {
+  margin-bottom: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header p {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.body {
+  line-height: 1.5rem;
+}
+
+.avatar-icon {
+  width: 36px;
+  height: 36px;
+
+  padding: 8px;
+  border-radius: 50%;
+
+  background: #e5e7eb;
+  color: #6b7280;
+}
+
+.tags {
+  display: flex;
+  gap: 15px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  gap: 15px;
+}
+
+.group-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.action-icon {
+  width: 20px;
+  height: 20px;
+  color: #666;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.action-icon:hover {
+  transform: scale(1.1);
+}
+
+.liked {
+  color: #ef4444;
+  fill: #ef4444;
+}
+
+.icon-tag {
+  color: #3b82f6;
+}
+
+.icon-tag:hover {
+  color: #2563eb;
+  transform: scale(1.08);
+}
+
+.icon-dislike {
+  color: #6b7280;
+}
+
+.icon-dislike:hover {
+  color: #374151;
+  transform: scale(1.08);
+}
+
+.icon-dislike.active {
+  color: #ef4444;
+  fill: #ef4444;
+}
+
+.icon-eye {
+  color: #6b7280;
+}
+
+.icon-eye:hover {
+  color: #111827;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #22c55e;
+}
+
+.post-skeleton {
+  padding: 16px;
+  border-radius: 16px;
+  background: white;
+  margin-bottom: 16px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   Skeleton Animation
+========================= */
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.skeleton-line,
+.skeleton-avatar,
+.skeleton-tag,
+.skeleton-stat {
+  background: #e5e7eb;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.skeleton-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 16px;
+}
+
+.skeleton-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.skeleton-user-info {
+  flex: 1;
+}
+
+.skeleton-name {
+  width: 120px;
+  height: 14px;
+  border-radius: 8px;
+
+  margin-bottom: 8px;
+}
+
+.skeleton-time {
+  width: 80px;
+  height: 12px;
+  border-radius: 8px;
+}
+
+
+/* =========================
+   Title
+========================= */
+
+.skeleton-title {
+  width: 70%;
+  height: 20px;
+
+  border-radius: 8px;
+
+  margin-bottom: 16px;
+}
+
+
+/* =========================
+   Body
+========================= */
+
+.skeleton-body {
+  margin-bottom: 16px;
+}
+
+.skeleton-line {
+  width: 100%;
+  height: 14px;
+
+  border-radius: 8px;
+
+  margin-bottom: 10px;
+}
+
+.skeleton-line.short {
+  width: 60%;
+}
+
+
+/* =========================
+   Tags
+========================= */
+
+.skeleton-tags {
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 16px;
+}
+
+.skeleton-tag {
+  width: 70px;
+  height: 28px;
+
+  border-radius: 999px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.skeleton-footer {
+  display: flex;
+  gap: 20px;
+}
+
+.skeleton-stat {
+  width: 50px;
+  height: 16px;
+
+  border-radius: 8px;
+}
