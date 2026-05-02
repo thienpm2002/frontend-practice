@@ -1,3 +1,13 @@
+## Tech Stack
+
+- React
+- JavaScript
+- Vite
+- CSS
+- Netlify
+
+---
+
 # ⭐ Reusable Star Rating Component
 
 ## Description
